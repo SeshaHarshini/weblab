@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fun = loc => new Promise(function(resolve,reject){
+            if(loc=="Paris"){
+                resolve("Let's go to paris");
+            }else{
+                reject("invalid input")
+            }
+        })
+
+        loc=prompt("Enter the location");
+        fun(loc).then((val)=>{
+            console.log(val)
+        }).catch((val)=>{
+            console.log(val)
+        });
+    </script>
+</body>
+</html>
